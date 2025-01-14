@@ -38,14 +38,14 @@ cp data/rawdata/*server *.log /data/processed/server_logs
 cp /data/rawdata/*server *.log data/processed/user_logs
 cp /data/rawdata/*server *.log /data/processed/event_logs
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-rm -riv */data/raw/*ipaddr
+rm -riv /data/raw/*ipaddr
 rm -riv /data/user_logs/*ipaddr
 rt -rf ./data 
 corrected from coworker
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-find "/Users/aoyaguip/downloads/DSI Shell/data/processed" -type f >> /"/Users/aoyaguip/downloads/DSI Shell/data/inventory.txt"
-
+touch data/inventory.txt 
+-type f >> /data/processed data/inventory.txt
 ###########################################
 
 echo "Project setup is complete!"
