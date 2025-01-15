@@ -41,8 +41,7 @@ rt -rf ./data
 #corrected from coworker
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-touch ./data/inventory.txt 
-ls ./data/processed > .data/inventory.txt
+find ./data/processed -type f > ./data/inventory.txt
 ###########################################
 
 echo "Project setup is complete!"
